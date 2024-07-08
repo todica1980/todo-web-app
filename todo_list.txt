@@ -1,7 +1,3 @@
-Mihai
-Raresica
-Iulia
-Curatat baie
-Dat cu mopul
-Bicu
-Bica
+master
+master Python
+dudu

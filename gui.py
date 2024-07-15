@@ -1,4 +1,3 @@
-import time
 
 import functions
 import FreeSimpleGUI

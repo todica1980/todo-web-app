@@ -1,7 +1,11 @@
-
 import functions
 import FreeSimpleGUI
 import time
+import os
+
+if not os.path.exists("todo_list.txt"):
+    with open("todo_list.txt", "w") as file:
+        pass
 
 FreeSimpleGUI.theme("Black")
 clock = FreeSimpleGUI.Text('', key='clock')
@@ -9,7 +13,7 @@ label = FreeSimpleGUI.Text("Type in a todo")
 input_box = FreeSimpleGUI.InputText(tooltip="Enter todo", key="todo")
 add_button = FreeSimpleGUI.Button("Add")
 list_box = FreeSimpleGUI.Listbox(values=functions.get_todos(), key='todos',
-                                 enable_events=True, size=[45,10])
+                                 enable_events=True, size=[45, 10])
 edit_button = FreeSimpleGUI.Button("Edit")
 complete_button = FreeSimpleGUI.Button("Complete")
 exit_button = FreeSimpleGUI.Button("Exit")

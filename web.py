@@ -11,7 +11,7 @@ def add_todo():
 
 st.title("My todo app")
 st.subheader("This is my todo application")
-st.write("This app is to improve my Python skills")
+st.write("This app is to improve my <b>Python</b> skills", unsafe_allow_html=True)
 
 
 for index, todo in enumerate(todos):
@@ -20,7 +20,7 @@ for index, todo in enumerate(todos):
         todos.pop(index)
         functions.write_todos(todos)
         del st.session_state[todo]
-        st.experimental_rerun()
+        st.rerun()
 
 st.text_input(label="Enter a todo", placeholder="Add new todo...",
               on_change=add_todo, key="new_todo")
